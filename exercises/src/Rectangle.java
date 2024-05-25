@@ -2,6 +2,11 @@ public class Rectangle {
     float height;
     float width;
 
+    public Rectangle (float height, float width) {
+        this.height = height;
+        this.width = width;
+    }
+
     float calculatePerimeter() {
         float perimeter;
 
@@ -27,10 +32,7 @@ public class Rectangle {
 
         Rectangle rectangle1;
 
-        rectangle1 = new Rectangle();
-
-        rectangle1.height = 10;
-        rectangle1.width = 20;
+        rectangle1 = new Rectangle(10, 20);
 
         rectangle1.printData();
     }
