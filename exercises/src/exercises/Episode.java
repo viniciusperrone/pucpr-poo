@@ -1,3 +1,5 @@
+package exercises;
+
 public class Episode {
     String title;
     int duration;
@@ -26,5 +28,4 @@ public class Episode {
         ep4.printEpisode();
         ep5.printEpisode();
     }
-
 }
