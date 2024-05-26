@@ -11,32 +11,46 @@ public class Main {
 
             prompt.chooseOption();
 
-            if(prompt.getOption() == 1) {
-                Student student = prompt.addNewStudent();
+            switch (prompt.getOption()) {
+                case 1: {
+                    Student student = prompt.addNewStudent();
 
-                listStudent.add(student);
-            }
+                    listStudent.add(student);
 
-            if(prompt.getOption() == 2) {
-                for (Student student : listStudent) {
-                    student.printData();
+                    break;
+                }
+
+                case 2: {
+                    for (Student student : listStudent) {
+                        student.printData();
+                    }
+
+                    break;
+                }
+
+                case 3: {
+                    int selectedIndexStudent = prompt.selectIndexStudent(listStudent);
+
+                    Student selectedStudent = listStudent.get(selectedIndexStudent - 1);
+
+                    prompt.updateStudent(selectedStudent);
+
+                    break;
+                }
+                case 4: {
+                    int selectedIndexStudent = prompt.selectIndexStudent(listStudent);
+
+                    listStudent.remove(selectedIndexStudent - 1);
+
+                    break;
+                }
+
+                default: {
+                    prompt.printInvalidOption();
+
+                    break;
                 }
             }
-
-            if(prompt.getOption() == 3) {
-                int selectedIndexStudent = prompt.selectIndexStudent(listStudent);
-
-                Student selectedStudent = listStudent.get(selectedIndexStudent - 1);
-
-                prompt.updateStudent(selectedStudent);
-            }
-
-            if(prompt.getOption() == 4) {
-                int selectedIndexStudent = prompt.selectIndexStudent(listStudent);
-
-                listStudent.remove(selectedIndexStudent - 1);
-            }
-
 
         }
     }

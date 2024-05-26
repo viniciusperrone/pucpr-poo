@@ -71,6 +71,10 @@ public class UserInterface {
         System.out.print("\n");
     }
 
+    void printInvalidOption() {
+        System.out.println("Opção inválida!");
+    }
+
     int getOption() {
         return this.option;
     }
