@@ -9,5 +9,11 @@ public class Student {
         this.gender = gender;
     }
 
+    void printData() {
+        System.out.println("Nome: " + this.name);
+        System.out.println("Idade: " + this.age);
+        System.out.println("Sexo: " + this.gender);
+    }
+
     public static void main(String [] args) {}
 }
