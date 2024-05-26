@@ -23,6 +23,20 @@ public class Main {
                 }
             }
 
+            if(prompt.getOption() == 3) {
+                int selectedIndexStudent = prompt.selectIndexStudent(listStudent);
+
+                Student selectedStudent = listStudent.get(selectedIndexStudent - 1);
+
+                prompt.updateStudent(selectedStudent);
+            }
+
+            if(prompt.getOption() == 4) {
+                int selectedIndexStudent = prompt.selectIndexStudent(listStudent);
+
+                listStudent.remove(selectedIndexStudent - 1);
+            }
+
 
         }
     }

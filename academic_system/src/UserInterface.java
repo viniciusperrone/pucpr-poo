@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class UserInterface {
     int option;
@@ -35,6 +36,39 @@ public class UserInterface {
         String gender = scanner.nextLine();
 
         return new Student(name, age, gender);
+    }
+
+    int selectIndexStudent(ArrayList<Student> students) {
+        Scanner scanner = new Scanner(System.in);
+
+        for (int i = 0; i < students.size(); i++) {
+            System.out.printf("%d. Estudante\n", i + 1);
+
+            Student student = students.get(i);
+
+            student.printData();
+        }
+
+        System.out.print("\nEscolha o index do estudante que deseja: ");
+
+        return Integer.parseInt(scanner.nextLine());
+    }
+
+    void updateStudent(Student student) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Nome: ");
+        String newName = scanner.nextLine();
+        System.out.print("Idade: ");
+        int newAge = Integer.parseInt(scanner.nextLine());
+        System.out.print("Nome: ");
+        String newGender = scanner.nextLine();
+
+        student.name = newName;
+        student.age = newAge;
+        student.gender = newGender;
+
+        System.out.print("\n");
     }
 
     int getOption() {
