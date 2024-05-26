@@ -6,7 +6,9 @@ public class Main {
     public static void main(String[] args) {
         ArrayList<Student> listStudent = new ArrayList<>();
 
-        while (true) {
+        String continuosLoop = String.valueOf('S');
+
+        while (continuosLoop.equals("S")) {
             UserInterface prompt = new UserInterface();
 
             prompt.chooseOption();
@@ -52,6 +54,7 @@ public class Main {
                 }
             }
 
+            continuosLoop = prompt.askContinuosLoop();
         }
     }
 }

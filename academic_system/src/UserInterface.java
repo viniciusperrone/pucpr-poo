@@ -75,6 +75,14 @@ public class UserInterface {
         System.out.println("Opção inválida!");
     }
 
+    String askContinuosLoop() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Desejar continuar (S/N): ");
+
+        return scanner.nextLine();
+    }
+
     int getOption() {
         return this.option;
     }
