@@ -4,6 +4,16 @@ public class Account {
     private double balance;
     private String password;
 
-    
+    public String getNumberAccount() {
+        return this.numberAccount;
+    }
+
+    public String getAgency() {
+        return this.agency;
+    }
+
+    public double getBalance() {
+        return this.balance;
+    }
 
 }
