@@ -20,4 +20,5 @@ public class Account {
         this.password = password;
     }
 
+    public static void main(String [] args) {}
 }
