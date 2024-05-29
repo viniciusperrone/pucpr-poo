@@ -16,4 +16,8 @@ public class Account {
         return this.balance;
     }
 
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
 }
